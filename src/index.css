@@ -1,0 +1,81 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-display: 'Syne', 'Plus Jakarta Sans', sans-serif;
+  --font-mono: 'JetBrains Mono', ui-monospace, SFMono-Regular, monospace;
+
+  --color-vanta-black: #050605;
+  --color-vanta-void: #070907;
+  --color-vanta-surface: #090B09;
+  --color-vanta-elevated: #0D120E;
+  --color-vanta-panel: #111712;
+  --color-vanta-border: rgba(255, 255, 255, 0.08);
+  --color-vanta-border-hover: rgba(112, 255, 94, 0.3);
+  --color-vanta-green: #70FF5E;
+  --color-vanta-green-glow: #69FF57;
+  --color-vanta-green-dim: #3cae32;
+  --color-vanta-green-dark: #0f2413;
+  --color-vanta-amber: #f59e0b;
+  --color-vanta-red: #ef4444;
+  --color-vanta-text-primary: #ededed;
+  --color-vanta-text-muted: #8b9c8d;
+  --color-vanta-text-dim: #4d5c50;
+}
+
+:root {
+  color-scheme: dark;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: #050605;
+  color: #ededed;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Custom subtle noise texture */
+.vanta-noise {
+  background-image: radial-gradient(rgba(112, 255, 94, 0.04) 1px, transparent 1px);
+  background-size: 24px 24px;
+}
+
+/* Atmospheric glow effect inspired by DotDNA reference */
+.vanta-beam-glow {
+  background: radial-gradient(circle at 50% 0%, rgba(112, 255, 94, 0.18) 0%, rgba(112, 255, 94, 0.04) 40%, transparent 75%);
+}
+
+.vanta-glow-subtle {
+  box-shadow: 0 0 35px -8px rgba(112, 255, 94, 0.15);
+}
+
+.vanta-glow-strong {
+  box-shadow: 0 0 50px -10px rgba(112, 255, 94, 0.35);
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+::-webkit-scrollbar-track {
+  background: #050605;
+}
+::-webkit-scrollbar-thumb {
+  background: #1b261d;
+  border-radius: 2px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #70FF5E;
+}
+
+/* Editorial typography display */
+.font-display {
+  font-family: var(--font-display);
+}
+
+.font-mono-tech {
+  font-family: var(--font-mono);
+  letter-spacing: -0.02em;
+}
